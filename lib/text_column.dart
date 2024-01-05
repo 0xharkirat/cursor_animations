@@ -15,17 +15,17 @@ class TextColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Ink(
+    return Container(
       width: double.infinity,
       color: backgroundColor,
-
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Hello", style: _defaultTextStyle.copyWith(
-            fontSize: 30
-          ),),
+          Text(
+            "Hello",
+            style: _defaultTextStyle.copyWith(fontSize: 30),
+          ),
           const SizedBox(
             height: 20,
           ),
@@ -41,18 +41,21 @@ class TextColumn extends StatelessWidget {
             onHover: onLinkHovered,
             mouseCursor: SystemMouseCursors.none,
             onTap: () {},
-            child: Ink(
-              child: Column(
-                children: [
-                  Text("See What happens", style: _defaultTextStyle,),
-                  const SizedBox(height: 7,),
-                  Container(
-                    color: textColor,
-                    width: 50,
-                    height: 2,
-                  ),
-                ],
-              ),
+            child: Column(
+              children: [
+                Text(
+                  "See What happens",
+                  style: _defaultTextStyle,
+                ),
+                const SizedBox(
+                  height: 7,
+                ),
+                Container(
+                  color: textColor,
+                  width: 50,
+                  height: 2,
+                ),
+              ],
             ),
           )
         ],

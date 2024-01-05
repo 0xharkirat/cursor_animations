@@ -32,7 +32,7 @@ class Pointer extends CustomPainter{
   @override
   void paint(Canvas canvas, Size size) {
     canvas.drawCircle(
-      Offset(0, 0),
+      const Offset(0, 0),
       radius,
       Paint()
       ..color = Colors.white
